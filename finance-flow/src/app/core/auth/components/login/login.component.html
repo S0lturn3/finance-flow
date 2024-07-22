@@ -1,0 +1,46 @@
+<div class="row vh-100">
+   <!-- FUNDO -->
+   <div class="col-8 background-image"></div>
+
+   <!-- FORM -->
+   <div class="col-4 border d-flex flex-column align-items-center justify-content-center">
+      <div class="w-100 px-5">
+         <div class="row fw-bold mb-3"> A U T E N T I C A Ç Ã O </div>
+      
+         <form [formGroup]="loginForm">
+            <div class="row mb-3">
+               <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com" formControlName="email"
+                     [class.is-invalid]="loginForm.get('email')?.invalid">
+                  <label for="floatingEmailInput"> E-mail </label>
+               </div>
+               <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPasswordInput" placeholder="Senha" formControlName="senha"
+                     [class.is-invalid]="loginForm.get('senha')?.invalid">
+                  <label for="floatingPasswordInput"> Senha </label>
+               </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between mb-3">
+               <div class="form-check d-flex align-items-center ps-4">
+                  <input class="form-check-input me-2" type="checkbox" id="rememberMeCheckbox" formControlName="rememberMe">
+                  <label class="form-check-label text-secondary" for="rememberMeCheckbox"> Lembre-se de mim </label>
+               </div>
+               <a class="text-secondary text-decoration-none cursor-pointer">Esqueceu a senha?</a>
+            </div>
+         </form>
+
+         <div class="row text-center mb-5">
+            <button class="btn btn-success p-2"> LOGIN </button>
+            <a class="text-secondary text-decoration-none cursor-pointer"> ou cadastre-se </a>
+         </div>
+
+         <div class="d-flex flex-row align-items-center justify-content-evenly">
+            <span class="text-secondary"> ou entre usando </span>
+            <a class="text-success cursor-pointer" title="Google"> <i class="bi bi-google"></i> </a>
+            <a class="text-success cursor-pointer" title="Microsoft"> <i class="bi bi-microsoft"></i> </a>
+            <a class="text-success cursor-pointer" title="Twitter / X"> <i class="bi bi-twitter-x"></i> </a>
+         </div>
+      </div>
+   </div>
+</div>
